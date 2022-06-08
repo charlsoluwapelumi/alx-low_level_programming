@@ -1,24 +1,33 @@
 #include <stdio.h>
-#include <main.h>
-   
-void printFibonacciNumbers(int n) 
-{ 
-    int f1 = 0, f2 = 1, i; 
-  
-    if (n < 1) 
-        return; 
-  
-    for (i = 1; i <= n; i++) 
-    { 
-        printf("%d ", f2); 
-        int next = f1 + f2; 
-        f1 = f2; 
-        f2 = next; 
-    } 
-}
 
-int main() 
-{ 
-    printFibonacciNumbers(7); 
-    return 0; 
-} 
+/**
+ * main - prints the first 98 Fibonacci numbers, starting with 1 and 2
+ *
+ * Return: Always 0.
+ */
+
+int main(void)
+{
+	long int sum;
+	long int first, second;
+	int count;
+
+	sum = 0;
+	first = 0;
+	second = 1;
+	count = 0;
+
+	while (count < 97)
+	{
+		sum = first + second;
+		printf("%li, ", sum);
+		first = second;
+		second = sum;
+
+		count++;
+	}
+	sum = first + second;
+	printf("%li\n", sum);
+
+	return (0);
+}
