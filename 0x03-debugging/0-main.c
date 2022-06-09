@@ -1,7 +1,6 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 
 void positive_or_negative(int i)
 {
